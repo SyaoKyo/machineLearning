@@ -3,7 +3,8 @@
 ## 感知机模型
 
 感知机定义：假设输入空间（特征空间）是 ![](https://latex.codecogs.com/gif.latex?\\\mathcal{X}\in%20R^n)，输出空间是![](http://latex.codecogs.com/gif.latex?\\\mathcal{Y}=\lbrace+1,-1\rbrace),输入![](http://latex.codecogs.com/gif.latex?\\x\in\mathcal{X})表示实例的特征向量，对应于输入空间（特征空间）的点；输出![](http://latex.codecogs.com/gif.latex?\\y\in\mathcal{Y})表示实例的类别，由输入空间到输出空间的模型称为感知机。如下函数：
-![](http://latex.codecogs.com/gif.latex?\\f(x)=sign(w \cdot x + b))
+
+![](https://latex.codecogs.com/gif.latex?\\f(x)=sign(w%20\cdot%20x%20+%20b))
 其中，![](http://latex.codecogs.com/gif.latex?\\w)和![](http://latex.codecogs.com/gif.latex?\\b)为感知机模型参数，![](http://latex.codecogs.com/gif.latex?\\w\in%20R^n)叫作权值（weight）或权值向量（weight vector），![](http://latex.codecogs.com/gif.latex?\\b\in%20R)叫作偏置（bias），![](http://latex.codecogs.com/gif.latex?\\w\cdot%20x)表示![](http://latex.codecogs.com/gif.latex?\\w)和![](http://latex.codecogs.com/gif.latex?\\x)的内积。sign是符号函数，即
 
 ![](https://latex.codecogs.com/gif.latex?\\%20sign(x)=\left\{%20\begin{array}{rcl}%20+1,%20&%20x\geq%200\\%20-1,%20&%20x%3C0\\%20\end{array}%20\right.)
