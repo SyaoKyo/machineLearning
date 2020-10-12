@@ -61,7 +61,7 @@ $$
 $$
 -y_i(w \cdot x + b) > 0
 $$
-成立。因为当 $w \cdot x + b > 0$ 时，$y_i=-1$ ，当$w \cdot x + b < 0$ 时，$y_i=+1$。所以误分类点 ![[公式]](https://www.zhihu.com/equation?tex=x_%7Bi%7D) 到分离超平面的距离:
+成立。因为当 $w \cdot x + b > 0$ 时，$y_i=-1$ ，当$w \cdot x + b < 0$ 时，$y_i=+1$。所以误分类点  $x_i$到分离超平面的距离:
 $$
 -\frac{1}{\|w\|}y_i(w \cdot x_i + b)
 $$
