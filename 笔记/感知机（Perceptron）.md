@@ -23,7 +23,7 @@ w \cdot x + b = 0
 $$
 对应于特征空间$R^n$中的一个超平面$S$，其中$w$是超平面的法向量，$b$是超平面的截距。这个超平面将特征空间划分为两个部分。位于两部分的点（特征向量）分别被分为正、负两类。因此，超平面$S$称为分离超平面（separating hyperplane），如下图所示。
 
-![](https://github.com/SyaoKyo/machineLearning/blob/main/%E7%AC%94%E8%AE%B0/%E5%9B%BE%E7%89%87/%E6%84%9F%E7%9F%A5%E6%9C%BA/%E6%84%9F%E7%9F%A5%E6%9C%BA%E6%A8%A1%E5%9E%8B.jpg?raw=true)
+![](.\图片\感知机\感知机模型.jpg)
 
 感知机学习，由训练数据集（市里的特征向量及类别）
 $$
@@ -132,7 +132,7 @@ $$
 
 这个算法是感知机学习的基本算法，对应于后面的对偶形式，称为原始形式。感知机学习算法简单且易于实现。
 
-实现代码（自写+sklearn自带）：[代码](https://github.com/SyaoKyo/machineLearning/blob/main/%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/Perceptron.py)
+实现代码（自写+sklearn自带）：[代码](./代码/Perceptron.py)
 
 ```python
 import numpy as np
@@ -246,7 +246,7 @@ if __name__ == '__main__':
 
 划分结果如下：
 
-![](https://github.com/SyaoKyo/machineLearning/blob/main/%E7%AC%94%E8%AE%B0/%E5%9B%BE%E7%89%87/%E6%84%9F%E7%9F%A5%E6%9C%BA/%E8%87%AA%E5%88%B6%E7%BB%83%E4%B9%A0.png?raw=true)
+![](.\图片\感知机\自制练习.png)
 
 
 
