@@ -132,7 +132,7 @@ $$
 
 这个算法是感知机学习的基本算法，对应于后面的对偶形式，称为原始形式。感知机学习算法简单且易于实现。
 
-实现代码（自写+sklearn自带）：
+实现代码（自写+sklearn自带）：[代码](https://github.com/SyaoKyo/machineLearning/blob/main/%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81/Perceptron.py)
 
 ```python
 import numpy as np
