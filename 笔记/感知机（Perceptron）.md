@@ -1,19 +1,3 @@
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-</head>
-
-
 # 感知机（Perceptron）
 
 ## 感知机模型
@@ -39,7 +23,7 @@ w \cdot x + b = 0
 $$
 对应于特征空间$R^n$中的一个超平面$S$，其中$w$是超平面的法向量，$b$是超平面的截距。这个超平面将特征空间划分为两个部分。位于两部分的点（特征向量）分别被分为正、负两类。因此，超平面$S$称为分离超平面（separating hyperplane），如下图所示。
 
-![](C:\Users\cheng\Desktop\笔记\图片\感知机\感知机模型.jpg)
+![](https://github.com/SyaoKyo/machineLearning/blob/main/%E7%AC%94%E8%AE%B0/%E5%9B%BE%E7%89%87/%E6%84%9F%E7%9F%A5%E6%9C%BA/%E6%84%9F%E7%9F%A5%E6%9C%BA%E6%A8%A1%E5%9E%8B.jpg?raw=true)
 
 感知机学习，由训练数据集（市里的特征向量及类别）
 $$
@@ -262,7 +246,7 @@ if __name__ == '__main__':
 
 划分结果如下：
 
-![](C:\Users\cheng\Desktop\笔记\图片\感知机\自制练习.png)
+![](https://github.com/SyaoKyo/machineLearning/blob/main/%E7%AC%94%E8%AE%B0/%E5%9B%BE%E7%89%87/%E6%84%9F%E7%9F%A5%E6%9C%BA/%E8%87%AA%E5%88%B6%E7%BB%83%E4%B9%A0.png?raw=true)
 
 
 
