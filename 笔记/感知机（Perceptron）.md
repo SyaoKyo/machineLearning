@@ -341,3 +341,10 @@ $$
 
    
 
+## 参考资料
+
+李航	《统计学习方法》第二版
+
+刘建平Pinard	《感知机原理小结》	https://www.cnblogs.com/pinard/p/6042320.html
+
+Eureka	《感知机（Perceptron）及python实现》	https://zhuanlan.zhihu.com/p/38098165
