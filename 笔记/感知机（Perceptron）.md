@@ -6,14 +6,15 @@
 ![](http://latex.codecogs.com/gif.latex?\\f(x)=sign(w \cdot x + b))
 其中，![](http://latex.codecogs.com/gif.latex?\\w)和![](http://latex.codecogs.com/gif.latex?\\b)为感知机模型参数，![](http://latex.codecogs.com/gif.latex?\\w\in%20R^n)叫作权值（weight）或权值向量（weight vector），![](http://latex.codecogs.com/gif.latex?\\b\in%20R)叫作偏置（bias），![](http://latex.codecogs.com/gif.latex?\\w\cdot%20x)表示![](http://latex.codecogs.com/gif.latex?\\w)和![](http://latex.codecogs.com/gif.latex?\\x)的内积。sign是符号函数，即
 
-<div align=center>![](https://latex.codecogs.com/gif.latex?\\%20sign(x)=\left\{%20\begin{array}{rcl}%20+1,%20&%20x\geq%200\\%20-1,%20&%20x%3C0\\%20\end{array}%20\right.)
-</div>
+![](https://latex.codecogs.com/gif.latex?\\%20sign(x)=\left\{%20\begin{array}{rcl}%20+1,%20&%20x\geq%200\\%20-1,%20&%20x%3C0\\%20\end{array}%20\right.)
+
 
 感知机是一种线性分类模型，属于判别模型。感知机模型的假设空间是定义在特征空间中的所有线性分类模型（linear classification model）或线性分类器（linear classifier），即函数集合![](https://latex.codecogs.com/gif.latex?\\\{f|f(x)=w%20\cdot%20x%20+%20b\})。
 
 感知机有如下几何解释
-<div align=center>![](https://latex.codecogs.com/gif.latex?\\%20w%20\cdot%20x%20+%20b%20=%200)
-</div>
+
+![](https://latex.codecogs.com/gif.latex?\\%20w%20\cdot%20x%20+%20b%20=%200)
+
 对应于特征空间![](https://latex.codecogs.com/gif.latex?\\R^n)中的一个超平面![](http://latex.codecogs.com/gif.latex?\\S)，其中![](http://latex.codecogs.com/gif.latex?\\w)是超平面的法向量，![](http://latex.codecogs.com/gif.latex?\\b)是超平面的截距。这个超平面将特征空间划分为两个部分。位于两部分的点（特征向量）分别被分为正、负两类。因此，超平面![](http://latex.codecogs.com/gif.latex?\\S)称为分离超平面（separating hyperplane），如下图所示。
 
 ![](.\图片\感知机\感知机模型.jpg)
@@ -37,6 +38,7 @@
 ### 感知机学习策略
 
 输入空间![](http://latex.codecogs.com/gif.latex?\\R^n)中的任一点![](http://latex.codecogs.com/gif.latex?\\x_0)到超平面![](http://latex.codecogs.com/gif.latex?\\S)的距离：
+
 ![](https://latex.codecogs.com/gif.latex?\\%20\frac{1}{\|w\|}|w%20\cdot%20x_0%20+%20b|)
 
 
@@ -45,10 +47,11 @@
 对于误分类数据![](http://latex.codecogs.com/gif.latex?\\(x_i,y_i))，有
 ![](https://latex.codecogs.com/gif.latex?\\%20-y_i(w%20\cdot%20x%20+%20b)%20%3E%200)
 成立。因为当 ![](http://latex.codecogs.com/gif.latex?\\w \cdot x + b > 0) 时，![](http://latex.codecogs.com/gif.latex?\\y_i=-1) ，当![](https://latex.codecogs.com/gif.latex?\\w%20\cdot%20x%20+%20b%20%3C%200) 时，![](http://latex.codecogs.com/gif.latex?\\y_i=+1)。所以误分类点 ![[公式]](https://www.zhihu.com/equation?tex=x_%7Bi%7D) 到分离超平面的距离:
+
 ![](https://latex.codecogs.com/gif.latex?\\%20-\frac{1}{\|w\|}y_i(w%20\cdot%20x_i%20+%20b))
 
-
 假设超平面![](http://latex.codecogs.com/gif.latex?\\S)的误分类点集合为![](http://latex.codecogs.com/gif.latex?\\M)，则所有误分类点到超平面![](http://latex.codecogs.com/gif.latex?\\S)的总距离：
+
 ![](http://latex.codecogs.com/gif.latex?\\%20-\frac{1}{\|w\|}\sum_{x_i%20\in%20M}y_i(w%20\cdot%20x_i%20+%20b))
 不考虑![](http://latex.codecogs.com/gif.latex?\\\frac{1}{\|w\|})，就能得到感知机学习的损失函数。给定训练数据集
 ![](https://latex.codecogs.com/gif.latex?\\T=\{(x_1,y_1),(x_2,y_2),\cdots,(x_n,y_n)\})
