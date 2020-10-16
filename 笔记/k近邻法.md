@@ -136,6 +136,8 @@ kd树可以省去对大部分数据点的搜索，从而减少搜索的计算量
 
 <div style="text-align: center;"><img src="./图片/k近邻法/找kd树.png" /></div>
 
+<div style="text-align: center;"><img src="./笔记/图片/k近邻法/找kd树.png" /></div>
+
 下面叙述用kd树的最近邻搜索算法：
 
 >输入：已构造的kd树，目标点<img src="http://latex.codecogs.com/gif.latex?x" />；
