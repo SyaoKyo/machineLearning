@@ -12,14 +12,13 @@
 
 > 输入：训练集
 > <div style="text-align: center;"><img src="http://latex.codecogs.com/gif.latex?T=\{(x_1,y_1),(x_2,y_2),\cdots,(x_N,y_N),\}"  /></div>
-> 其中，<img src="http://latex.codecogs.com/gif.latex?x_i\in\mathcal{X}\subseteq R^n"  />为实例的特征向量，<img src="http://latex.codecogs.com/gif.latex?y_i\in\mathcal{Y}=\{c_1,c_2,\cdots,c_K\}"  />为实例的类别，<img src="http://latex.codecogs.com/gif.latex?i=1,2,\cdots,N" />；实例特征向量<img src="http://latex.codecogs.com/gif.latex?x" />;
+> 其中，<img src="https://latex.codecogs.com/gif.latex?x_i\in\mathcal{X}\subseteq%20R^n"  />为实例的特征向量，<img src="http://latex.codecogs.com/gif.latex?y_i\in\mathcal{Y}=\{c_1,c_2,\cdots,c_K\}"  />为实例的类别，<img src="http://latex.codecogs.com/gif.latex?i=1,2,\cdots,N" />；实例特征向量<img src="http://latex.codecogs.com/gif.latex?x" />;
 > 输出：实例<img src="http://latex.codecogs.com/gif.latex?x" />所属的类<img src="http://latex.codecogs.com/gif.latex?y" />
 >
 > 1. 根据给定的距离度量，在训练集<img src="http://latex.codecogs.com/gif.latex?T" />中找出与<img src="http://latex.codecogs.com/gif.latex?x" />最邻近的<img src="http://latex.codecogs.com/gif.latex?k" />个点，涵盖这<img src="http://latex.codecogs.com/gif.latex?k" />个点的<img src="http://latex.codecogs.com/gif.latex?x" />的邻域记做<img src="http://latex.codecogs.com/gif.latex?N_k(x)" />；
 >
 > 2. 在<img src="http://latex.codecogs.com/gif.latex?N_k(x)" />中根据分类决策规则（如多表决策）决定<img src="http://latex.codecogs.com/gif.latex?x" />的类别<img src="http://latex.codecogs.com/gif.latex?y" />：
-> <div style="text-align: center;"><img src="http://latex.codecogs.com/gif.latex?y=arg\max_{c_j}\sum_{x_i\in N_k(x)}I(y_i=c_j),  i=1,2,\cdots,K" /></div>
->
+> <div style="text-align: center;"><img src="https://latex.codecogs.com/gif.latex?y=arg\max_{c_j}\sum_{x_i\in%20N_k(x)}I(y_i=c_j),i=1,2,\cdots,K" /></div>
 
 其中，<img src="http://latex.codecogs.com/gif.latex?I" />为指示函数，即当<img src="http://latex.codecogs.com/gif.latex?y_i=c_j" />时<img src="http://latex.codecogs.com/gif.latex?y" />为1，否则为0。
 
@@ -119,7 +118,7 @@ kd树是一种对<img src="http://latex.codecogs.com/gif.latex?k" />维空间中
 >
 >   将落在切分超平面上的实例点保存在根结点。
 >
->2. 重复：对深度为<img src="http://latex.codecogs.com/gif.latex?j" />的结点，选择<img src="http://latex.codecogs.com/gif.latex?x^{(l)}" />为切分的坐标轴，<img src="http://latex.codecogs.com/gif.latex?l=j(mod\ k)+1" />,以该结点的区域中所有实例的<img src="http://latex.codecogs.com/gif.latex?x^{(l)}" />坐标的中位数为切分点,将该结点对应的超矩形区域切分为两个子区域。切分由通过切分点并与坐标轴<img src="http://latex.codecogs.com/gif.latex?x^{(l)}" />垂直的超平面实现。
+>2. 重复：对深度为<img src="http://latex.codecogs.com/gif.latex?j" />的结点，选择<img src="http://latex.codecogs.com/gif.latex?x^{(l)}" />为切分的坐标轴，<img src="https://latex.codecogs.com/gif.latex?l=j(mod\%20k)+1" />,以该结点的区域中所有实例的<img src="http://latex.codecogs.com/gif.latex?x^{(l)}" />坐标的中位数为切分点,将该结点对应的超矩形区域切分为两个子区域。切分由通过切分点并与坐标轴<img src="http://latex.codecogs.com/gif.latex?x^{(l)}" />垂直的超平面实现。
 >
 >    由该结点生成深度为<img src="http://latex.codecogs.com/gif.latex?j+1" />的左、右子结点：左子结点对应坐标<img src="http://latex.codecogs.com/gif.latex?x^{(l)}" />小于切分点的子区域，右子结点对应坐标<img src="http://latex.codecogs.com/gif.latex?x^{(l)}" />大于切分点的子区域。
 >
@@ -143,10 +142,15 @@ kd树可以省去对大部分数据点的搜索，从而减少搜索的计算量
 >输出：<img src="http://latex.codecogs.com/gif.latex?x" />的最近邻。
 >
 >1. 在kd树种找出包含目标点<img src="http://latex.codecogs.com/gif.latex?x" />的叶结点：从根结点出发，递归的向下访问kd树。若目标点<img src="http://latex.codecogs.com/gif.latex?x" />当前维的坐标小于切分点的坐标，则移动到左子结点，否则移动到右子结点。直到子结点为叶结点为止。
+>
 >2. 以此叶结点为“当前最近点”。
+>
 >3. 递归的向上回退，在每个结点进行以下操作：
->    (1). 如果该结点保存的实例点比当前最近点距离目标点更近，则以该实力点为“当前最近点”。
->    (2). 当前最近点一定存在于该结点的一个子结点对应的区域。检查该子结点的父结点的另一子结点对应的区域是否又更近的点。如果有，则移动到另一个子结点。接着，递归的进行最近邻搜索；反则向上回退。
+>   
+>   (1). 如果该结点保存的实例点比当前最近点距离目标点更近，则以该实力点为“当前最近点”。
+>   
+>   (2). 当前最近点一定存在于该结点的一个子结点对应的区域。检查该子结点的父结点的另一子结点对应的区域是否又更近的点。如果有，则移动到另一个子结点。接着，递归的进行最近邻搜索；反则向上回退。
+>   
 >4. 当回退到根结点时，搜索结束。最后的“当前最近点”即为<img src="http://latex.codecogs.com/gif.latex?x" />的最近邻点。
 
 如果实例点是随机分布的，kd树搜索的平均计算复杂度是<img src="http://latex.codecogs.com/gif.latex?O(logN)" />，这里<img src="http://latex.codecogs.com/gif.latex?N" />是训练实例数。kd树更适用于训练实例数远大于维数时的<img src="http://latex.codecogs.com/gif.latex?k" />近邻搜索。当空间维数接近训练实例数时，它的效率会迅速下降，几乎接近线性扫描。
